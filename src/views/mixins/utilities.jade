@@ -1,0 +1,21 @@
+//- -------------- Images ---------------- -//
+//- --------------------------------------- -//
+mixin basicImage(src, alt, cls)
+    img.generic__image(src=src, alt=alt, class=cls )
+    
+
+//- -------------- Buttons ---------------- -//
+//- --------------------------------------- -//
+mixin basicLink(text, url, newclass, newTab)
+    a.generic__link(class=newclass, href=url || '#', target=newTab || '_self')&attributes(attributes) #{text}
+    
+    
+//- -------------- New Lists --------------- -//
+//- --------------------------------------- -//
+mixin basicList(newItemClass, newText)
+    li.list__main__doto__item#draggable
+                a.item__todo__items(class=newItemClass) 
+                    span.item__todo__unchecked.icon-checkbox-unchecked
+                span.item__todo__task.editable !{newText}
+                a.item__todo__close
+                    span.item__todo__close__icon.icon-cancel-circle

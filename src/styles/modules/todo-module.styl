@@ -1,0 +1,140 @@
+// ---------------------------------------- //
+// -------------- TO-DO MODULE ------------ //
+// ---------------------------------------- //
+
+
+
+// -------------- GENERAL MODULE TO-DO ------------ //
+.todo__list__main__content
+    background $desert-storm
+    width 100%
+    display block
+    
+.todo__list__main__lists
+    width 60%
+    float left
+    border-right 1px solid $borders
+    +for_breakpoint(mobile)
+        width 100%
+        float none
+    
+.todo__list__main__add
+    width 39%
+    float right
+    +for_breakpoint(mobile)
+        width 100%
+        float none
+        border-bottom 1px solid $borders
+        padding-bottom 25px
+        overflow hidden
+    
+// -------------- TO-DO MODULE LIST ------------ //  
+.list__main__internal__list
+    width 100%
+    
+.list__main__doto__item
+    border-bottom 1px solid $borders
+    font-family $conforta-regular
+    color $nevada 
+    height 43px
+    position relative
+    transition background 0.3s
+    &:last-child
+        border-bottom none
+        
+    &:hover
+        background rgba(129,55,72,1)
+        color $white
+        .item__todo__close__icon
+            display block
+        
+.item__todo__items
+    padding 12px 0 12px 30px
+    display inline-block
+    cursor pointer
+    position relative
+    z-index 2
+        
+.item__todo__close__icon
+    position absolute
+    cursor pointer
+    right 12px
+    top 14px
+    display none
+    
+.icon-checkbox-checked
+    padding-right 11px
+    color $green-aproved
+    position absolute
+    top 14px
+    
+.icon-checkbox-unchecked
+    padding-right 11px
+    color $nevada
+    position absolute
+    top 14px
+    
+.item__todo__task
+    padding-left 24px
+    position relative
+    top 2px
+        
+// -------------- TO-DO MODULE ADD LIST ------------ //  
+
+.todo__list__main__title
+    font-family $conforta-thin
+    font-size 1.5vw
+    margin-top 23px
+    margin-left 23px
+    text-transform uppercase
+    color $nevada 
+    +for_breakpoint(mobile)
+        font-size 3.5vw
+        text-align center
+        margin-left 0
+
+.main__todo__list__form
+    margin-top 10px
+    margin-left 23px
+    overflow hidden
+    width 80%
+    +for_breakpoint(mobile)
+        margin-left auto
+        margin-right auto
+        overflow hidden
+        width 100%
+        max-width 300px
+    
+.main__todo__clear
+    cursor pointer
+    font-family $conforta-thin
+    font-size 13px
+    color $keppel 
+    margin-left 23px
+    margin-top 12px
+    display  block
+    
+.form__todo__list__insert
+    height 30px
+    width 64%
+    display block
+    float left
+    padding-left 9px
+    color $nevada
+    +for_breakpoint(mobile)
+        width 67%
+    
+.form__todo__list__submit
+    height 34px
+    width 30%
+    display block
+    float left
+    background #d45b5b
+    border none
+    border-radius 0 7px 7px 0
+    color $white
+    text-transform uppercase
+    font-family $conforta-bold
+    font-size 14px
+    +for_breakpoint(mobile)
+        width 28%

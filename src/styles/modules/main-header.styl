@@ -1,0 +1,33 @@
+// ---------------------------------------- //
+// --------------- MAIN HEADER ------------ //
+// ---------------------------------------- //
+
+html, body
+    background $nevada
+    
+.container__todo
+    max-width $size-desktop-min
+    margin 25px auto
+    background $white
+    border-radius 12px
+    overflow hidden
+    display block
+    +for_breakpoint(tablet)
+        margin 25px
+    +for_breakpoint(mobile)
+        margin 25px
+    
+.main__header
+    background $keppel
+    width 100%
+    padding 25px 12px
+    text-align center
+    +for_breakpoint(mobile)
+        font-size 5vw
+        padding 25px 0
+
+.main__header__title
+    font-family $conforta-bold 
+    color $white
+    text-shadow 2px 2px 0px rgba(41, 140, 141, 0.8)
+    

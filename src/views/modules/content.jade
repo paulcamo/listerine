@@ -1,0 +1,15 @@
+//- -------------- SAMPLE ---------------- -//
+//- -------------------------------------- -//
+
+section.todo__list__main__content
+    article.todo__list__main__add
+        h2.todo__list__main__title Please add new task
+        form#main__form.main__todo__list__form
+            input.form__todo__list__insert(type='text', id='toDoItem', name='toDoItem', placeholder='Enter task(s)', autofocus)
+            input.form__todo__list__submit(type='submit', value='Add Task', name='search', id='search' )
+            
+        a.main__todo__clear#clear-all clear all
+            
+    article.todo__list__main__lists
+        ul#theList.list__main__internal__list
+            +basicList('main-link', 'milk', 'unchecked')
